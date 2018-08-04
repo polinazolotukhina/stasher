@@ -5,7 +5,8 @@ import Button from '@material-ui/core/Button';
 import { DotLoader } from 'react-spinners';
 import './App.css';
 import StashCard from './StashCard';
-import MenuButtons from './buttons';
+import stashFilters from './filters';
+import stashSorters from './sorters';
 
 class App extends Component {
     state = {
@@ -52,25 +53,42 @@ class App extends Component {
     }
     render() {
         const { stashpoints } = this.state;
-        console.log('stashpoints', stashpoints);
         return (
             <div className="app">
-                <h2>Sort By: {this.state.header}</h2>
+                <h2>{this.state.header}</h2>
                 <div className="navbtn">
-                    {MenuButtons.map((item, index) => (
-                        <Button
-                            key={index}
-                            variant="outlined"
-                            onClick={() => {
-                                this.fetchStashpoints(
-                                    item.parameters,
-                                    item.label
-                                );
-                            }}
-                        >
-                            {item.label}
-                        </Button>
-                    ))}
+                    <div className="filters">
+                        {stashFilters.map((item, index) => (
+                            <Button
+                                key={index}
+                                variant="outlined"
+                                onClick={() => {
+                                    this.fetchStashpoints(
+                                        item.parameters,
+                                        item.label
+                                    );
+                                }}
+                            >
+                                {item.label}
+                            </Button>
+                        ))}
+                    </div>
+                    <div className="sorters">
+                        {stashSorters.map((item, index) => (
+                            <Button
+                                key={index}
+                                variant="outlined"
+                                onClick={() => {
+                                    this.fetchStashpoints(
+                                        item.parameters,
+                                        item.label
+                                    );
+                                }}
+                            >
+                                {item.label}
+                            </Button>
+                        ))}
+                    </div>
                 </div>
                 {this.renderStashpoints()}
             </div>

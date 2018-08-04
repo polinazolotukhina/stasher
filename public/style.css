@@ -13,3 +13,9 @@
 .navbtn {
     padding: 30px 0;
 }
+.sorters {
+    float: right;
+}
+.filters {
+    float: left;
+}
