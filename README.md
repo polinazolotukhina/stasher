@@ -1,6 +1,6 @@
 # Stasher
 
-
+~~~~~~
 **Clone the project**. git clone https://github.com/polinazolotukhina/stasher.git
 
 **Go to the folder **. cd stasher
@@ -9,9 +9,9 @@
 
 **Run **. npm start
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
 
 Demo: https://stasher-polina-z.herokuapp.com/ 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-https://stasher-polina-z.herokuapp.com/ 
+
+
