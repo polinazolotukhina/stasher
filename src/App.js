@@ -16,6 +16,7 @@ class App extends Component {
     componentDidMount() {
         this.fetchStashpoints('', this.state.header);
     }
+
     fetchStashpoints(parameters, header) {
         this.setState({ stashpoints: [], header });
         const query = queryString.stringify(parameters);
@@ -39,6 +40,7 @@ class App extends Component {
                                 rating={stashpoint.rating}
                                 postal_code={stashpoint.postal_code}
                                 country={stashpoint.country}
+                                capacity={stashpoint.capacity}
                             />
                         </Grid>
                     ))}
@@ -56,6 +58,7 @@ class App extends Component {
         return (
             <div className="app">
                 <h2>{this.state.header}</h2>
+
                 <div className="navbtn">
                     <div className="filters">
                         {stashFilters.map((item, index) => (
@@ -73,6 +76,7 @@ class App extends Component {
                             </Button>
                         ))}
                     </div>
+
                     <div className="sorters">
                         {stashSorters.map((item, index) => (
                             <Button
@@ -97,5 +101,3 @@ class App extends Component {
 }
 
 export default App;
-// {stashpoint.description}
-// <p>{stashpoint.rating}*</p>

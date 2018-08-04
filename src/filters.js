@@ -1,5 +1,4 @@
 export default [
-
     {
         label: 'All',
         parameters: ''
@@ -27,6 +26,5 @@ export default [
     {
         label: 'In Paris',
         parameters: { city: 'paris' }
-    },
-
+    }
 ];

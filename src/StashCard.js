@@ -58,7 +58,8 @@ class StashCard extends React.Component {
             address,
             rating,
             postal_code,
-            country
+            country,
+            capacity
         } = this.props;
         return (
             <div>
@@ -121,6 +122,10 @@ class StashCard extends React.Component {
                                 Description:
                             </Typography>
                             <Typography paragraph>{description}</Typography>
+
+                            <Typography paragraph>
+                                Capacity: {capacity}
+                            </Typography>
                         </CardContent>
                     </Collapse>
                 </Card>
