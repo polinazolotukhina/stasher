@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import queryString from 'query-string';
+import qs from 'qs';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { DotLoader } from 'react-spinners';
@@ -19,7 +19,7 @@ class App extends Component {
 
     fetchStashpoints(parameters, header) {
         this.setState({ stashpoints: [], header });
-        const query = queryString.stringify(parameters);
+        const query = qs.stringify(parameters);
         fetch(`https://api-staging.stasher.com/v1/stashpoints?${query}`)
             .then(response => response.json())
             .then(json => this.setState({ stashpoints: json }));
