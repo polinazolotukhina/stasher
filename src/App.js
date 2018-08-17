@@ -17,6 +17,16 @@ class App extends Component {
         this.fetchStashpoints('', this.state.header);
     }
 
+
+// async fetchStashpoints(parameters, header) {
+//         this.setState({ stashpoints: [], header });
+//         const query = qs.stringify(parameters);
+//         const response = await fetch(
+//             `https://api-staging.stasher.com/v1/stashpoints?${query}`
+//         );
+//         const data = await response.json();
+//         this.setState({ stashpoints: data });
+//     }
     fetchStashpoints(parameters, header) {
         this.setState({ stashpoints: [], header });
         const query = qs.stringify(parameters);
